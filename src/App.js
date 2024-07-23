@@ -1,22 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 function App() {
+  const name = "Rohan Sarikonda";
+  const bio = "A passionate highschooler with experience in various programming languages.";
+  const skills = ["JavaScript", "React", "Node.js", "Python"];
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>{name}</h1>
+        <p>{bio}</p>
+        <h2>Skills</h2>
+        <ul>
+          {skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
       </header>
     </div>
   );
